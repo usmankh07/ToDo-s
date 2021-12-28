@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Arimo&family=Boogaloo&family=Oooh+Baby&family=Shizuru&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Atak Trial';
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+    width: 100%;
+    height: 100vh;
+    background: rgb(197, 106, 106);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.center {
+    width: 25%;
+    height: 60%;
+    background-color: rgb(219, 154, 154);
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px -5px rgb(44, 44, 44);
+    
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.center h1 {
+    font-family: 'Shizuru', cursive;
+    color: white;
+    text-align: center;
+    font-size: 48px;
 }
-
-.App-link {
-  color: #61dafb;
+.center .inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
 }
+.center input {
+    width: 60%;
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+    box-shadow: 5px 5px 10px -5px rgb(44, 44, 44);
+}
+.center button {
+    cursor: pointer;
+    width: 20%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-size: 20px;
+    background-color: rgb(197, 106, 106);
+    color: white;
+    box-shadow: 5px 5px 10px -5px rgb(44, 44, 44);
+}
+.center button:hover {
+    background: rgb(201, 83, 83);
+}
+ol {
+    list-style-type: none;
+}
+ol li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+.todo_style {
+    display: flex;
+    justify-content: left;
+}
+.todo_style .fa {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 42%;
+    left: 80%;
+    background-color: #fff;
+    color: rgb(201, 83, 83);
+    border-radius: 50%;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.todo_style .fa:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(201, 83, 83);
+
+}
+@media screen and (max-width: 1139px) {
+    .center {
+        width: 35%;
+        height: 60%;
+        background-color: rgb(219, 154, 154);
+        border-radius: 38px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 5px 5px 15px -5px rgb(44, 44, 44);
+        
+    }
+}
+@media screen and (max-width: 768px) {
+    .center {
+        width: 45%;
+        height: 60%;
+        background-color: rgb(219, 154, 154);
+        border-radius: 38px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 5px 5px 15px -5px rgb(44, 44, 44);
+        
+    }
+    
+}
+@media screen and (max-width: 425px) {
+    .center {
+        width: 95%;
+        height: 60%;
+        background-color: rgb(219, 154, 154);
+        border-radius: 38px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 5px 5px 15px -5px rgb(44, 44, 44);
+        
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    .center {
+        width: 95%;
+        height: 60%;
+        background-color: rgb(219, 154, 154);
+        border-radius: 38px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 5px 5px 15px -5px rgb(44, 44, 44);
+        
+    }
+    
 }
