@@ -1,69 +1,68 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import './App.css'
 import TodoList from "./TodoList";
-import "./App.css";
+
 
 function App() {
-
-  const [inputList, setInputList] = useState("");
+  const [input, setInput] = useState("Baby Hello");
   const [Items, setItems] = useState([]);
 
 
   const inputEvent = (e) => {
-    setInputList(e.target.value);
+    return setInput(e.target.value);
   }
 
-
   const todoList = () => {
-    setItems( (oldtodoItems) => {
-      return [...oldtodoItems, inputList]
+    setItems((oldtodoItems) => {
+      return [...oldtodoItems, input]
     })
-    setInputList('');
+    setInput('')
   }
   const deleteItems = (id) => {
     setItems((oldtodoItems) => {
-      return oldtodoItems.filter((arrElements, index) => {
+      return oldtodoItems.filter((arrElement, index) => {
         return index !== id;
       })
     })
+
   }
 
+
   return (
-    <>
-    {/* Main Container */}
-      <div className="main">
-    {/* ToDo Container */}
-        <div className="center">
-          <br />
-          <h1> ToDo's </h1>
-          <br />
-    {/* Input and Button Container */}
-          <div className="inner">
-            <input type="text" placeholder="Add an item"
-              value={inputList}
-             onChange={inputEvent}/>
-            <button onClick={todoList} onkey="return{todoList}"> Add </button>
-          </div>
-          <br />
 
-    {/* ToDo's List Container*/}
-          <ol>
-            {/* <li>{inputList}</li> */}
+    <div className="main">
 
-         {Items.map((todoItems, index) => {
-           return <TodoList title = {todoItems} 
-             key = {index}
-             id = {index}
-             onSelect = {deleteItems}
-           />
-          })}
+    <div className="center">
+      <br />
+      <h1> ToDo List</h1>
+      <br />
 
-
-          </ol>
-
-        </div>
+      <div className="inner">
+        <input type="text" 
+        value={input}
+        onChange={inputEvent}
+        placeholder="Add an item" />
+        <button onClick={todoList}> Add </button>
       </div>
-    </>
-  );
-}
+      <br />
 
-export default App;
+
+      <div className="todo_style">
+      <ol>
+
+        {Items.map((todoItems, index) => {
+          return <TodoList title={todoItems}
+            key={index}
+            id = {index}
+            onSelect = {deleteItems}
+          />
+        })}
+      </ol>
+      </div>
+    </div>
+
+
+    </div>
+  )
+}
+export default App
