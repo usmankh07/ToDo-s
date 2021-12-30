@@ -4,7 +4,7 @@ import TodoList from "./TodoList";
 
 
 function App() {
-  const [input, setInput] = useState("Baby Hello");
+  const [input, setInput] = useState("");
   const [Items, setItems] = useState([]);
 
 
@@ -18,6 +18,11 @@ function App() {
     })
     setInput('')
   }
+  // const handleKeyPress = (event) => {
+  //   if (event.key === 'Enter') {
+  //     return todoList();
+  //   }
+  // }
   const deleteItems = (id) => {
     setItems((oldtodoItems) => {
       return oldtodoItems.filter((arrElement, index) => {
@@ -38,7 +43,7 @@ function App() {
       <br />
 
       <div className="inner">
-        <input type="text" 
+        <input type="text" autoFocus
         value={input}
         onChange={inputEvent}
         placeholder="Add an item" />
@@ -57,6 +62,35 @@ function App() {
             onSelect = {deleteItems}
           />
         })}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </ol>
       </div>
     </div>
